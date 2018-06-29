@@ -1,0 +1,114 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title class="colo">
+      Documents
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+   
+<div padding>
+  <ion-segment [(ngModel)]="pet">
+    <ion-segment-button value="puppies">
+      Communauté
+    </ion-segment-button>
+    <ion-segment-button value="kittens">
+      Université
+    </ion-segment-button>
+    <ion-segment-button value="lesmiens">
+      Les miens
+    </ion-segment-button>
+  </ion-segment>
+</div>
+
+<div [ngSwitch]="pet">
+  <ion-list *ngSwitchCase="'puppies'">
+    <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+    <ion-item>
+      <ion-thumbnail item-start>
+        <img src="../assets/images/doc1.png">
+      </ion-thumbnail>
+      <h2>Criolito</h2>
+    </ion-item>
+
+    <ion-item>
+      <ion-thumbnail item-start>
+        <img src="../assets/images/doc1.png">
+      </ion-thumbnail>
+      <h2>Criolito</h2>
+    </ion-item>
+    <ion-item>
+      <ion-thumbnail item-start>
+        <img src="../assets/images/doc1.png">
+      </ion-thumbnail>
+      <h2>Criolito</h2>
+    </ion-item>
+    <ion-item>
+      <ion-thumbnail item-start>
+        <img src="../assets/images/doc1.png">
+      </ion-thumbnail>
+      <h2>Criolito</h2>
+    </ion-item>
+    
+  </ion-list>
+
+  <ion-list *ngSwitchCase="'kittens'" isActive>
+    <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+    <ion-item>
+      <ion-thumbnail item-start>
+        <img src="../assets/images/doc1.png">
+      </ion-thumbnail>
+      <h2>Sql serveur</h2>
+    </ion-item>
+
+    <ion-item>
+      <ion-thumbnail item-start>
+        <img src="../assets/images/doc1.png">
+      </ion-thumbnail>
+      <h2>Sql serveur</h2>
+    </ion-item>
+
+    <ion-item>
+      <ion-thumbnail item-start>
+        <img src="../assets/images/doc1.png">
+      </ion-thumbnail>
+      <h2>Sql serveur</h2>
+    </ion-item>
+
+    <ion-item>
+      <ion-thumbnail item-start>
+        <img src="../assets/images/doc1.png">
+      </ion-thumbnail>
+      <h2>Sql serveur</h2>
+    </ion-item>
+    
+  </ion-list>
+
+  <ion-list *ngSwitchCase="'lesmiens'">
+    <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+    <ion-item>
+      <ion-thumbnail item-start>
+        <img src="../assets/images/doc1.png">
+      </ion-thumbnail>
+      <h2>ms doc for mindows</h2>
+    </ion-item>
+
+    <ion-item>
+      <ion-thumbnail item-start>
+        <img src="../assets/images/doc1.png">
+      </ion-thumbnail>
+      <h2>ms doc for mindows</h2>
+    </ion-item>
+
+    <ion-item>
+      <ion-thumbnail item-start>
+        <img src="../assets/images/doc1.png">
+      </ion-thumbnail>
+      <h2>ms doc for mindows</h2>
+    </ion-item>
+
+  </ion-list>
+</div>
+
+</ion-content>

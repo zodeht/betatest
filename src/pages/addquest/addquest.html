@@ -1,0 +1,36 @@
+<!--
+  Generated template for the AddquestPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Poser Questions</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-item>
+  <ion-label color="primary"  floating>Professeur</ion-label>
+  <ion-select [(ngModel)]="prof">
+      <ion-option value="Audin Michel Castor">Audin Michel Castor</ion-option>
+      <ion-option value="Ben">Petit-Homme Ben-Jacques</ion-option>
+  </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label color="primary" [(ngModel)]="sujet" floating>Sujet</ion-label>
+    <ion-input type="text" floating>
+    </ion-input>
+  </ion-item>
+  <ion-item>
+      <ion-label color="primary" [(ngModel)]="quest" floating>Questions</ion-label>
+      <ion-input type="text">
+      </ion-input>
+    </ion-item>
+      <button class="btn-center" [(ngModel)]="sendo" ion-button color="secondary" round small>Envoyer</button>
+</ion-content>
